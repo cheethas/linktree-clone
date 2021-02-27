@@ -6,7 +6,7 @@
   vertical-align: baseline;
   font-family: "Satisfy";
 }
-.Content{
+.Content {
   flex-direction: column;
   position: relative;
   padding-bottom: 0px;
@@ -15,8 +15,9 @@
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #ffe091;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23adaefa' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+  background-color: #5d95e9;
+  /* background-color: ghostwhite; */
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23adaefa' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E"); */
 }
 .App-header {
   flex: 1 1 0%;
@@ -28,16 +29,17 @@
   width: 100%;
   display: flex;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox */
+  -moz-box-sizing: border-box; /* Firefox */
   box-sizing: border-box;
 }
-.Body{
+.Body {
   margin: 0px auto;
   height: 100%;
   width: 100%;
-  max-width: 680px;
+  /* max-width: 680px; */
 }
-.Background-image{
+
+.Background-image {
   position: fixed;
   inset: 0px;
   z-index: -1;
@@ -46,7 +48,7 @@
   background-repeat: no-repeat;
   background-color: rgb(0, 0, 0);
 }
-.Profile{
+.Profile {
   -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
@@ -59,9 +61,9 @@
 .Profile-image {
   margin-bottom: 16px;
 }
-.Profile-image>img {
+.Profile-image > img {
   border-radius: 50%;
-  width: 96px;  
+  width: 96px;
   height: 96px;
   display: block;
   object-fit: contain;
@@ -82,7 +84,7 @@ h1 {
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   letter-spacing: 1px;
   color: White;
   padding-left: 5px;
@@ -95,25 +97,35 @@ h1 {
 .Link-container {
   position: relative;
   height: auto;
-  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
   overflow: hidden;
   margin-bottom: 16px;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  /* border: 2px solid rgb(255, 255, 255); */
+  /* border: 2px solid #285d56; */
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #285d56;
+  /* color: rgb(0, 0, 0); */
+  color: rgb(255, 255, 255);
+  /* color: #285d56; */
   border-radius: 8px;
-  display:flex;
-  background-color: sandybrown;
+  display: flex;
+  background-color: whitesmoke;
+  background-color: #285d56;
 }
-.Link-container:hover{
-  background-color:black;color:white;
+.Link-container:hover {
+  background-color: black;
+  color: white;
 }
-.Link-container>svg{
+.Link-container > svg {
   height: auto;
   padding-left: 5px;
 }
-.Link-container>a {
-  font-family: 'Karla', sans-serif;
+.Link-container > a {
+  font-family: "Karla", sans-serif;
   border: none;
   display: inline-flex;
   -webkit-box-align: center;
@@ -137,7 +149,40 @@ h1 {
   white-space: normal;
   background: none;
   color: inherit;
-  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+.Link-container > button {
+  font-family: "Karla", sans-serif;
+  border: none;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: auto;
+  position: relative;
+  padding: 16px 66px;
+  margin: 0px;
+  font-weight: bold;
+  font-size: inherit;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  background: none;
+  color: inherit;
+  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s,
+    background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
 }
 .Socials {
   padding-top: 16px;
@@ -153,15 +198,15 @@ h1 {
   height: 100%;
   display: flex;
 }
-.Social-links>a {
+.Social-links > a {
   color: inherit;
   transition: transform 0s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }
-.Icon{
+.Icon {
   margin: 0 5px;
   border-radius: 8px;
 }
-.Icon:hover{
+.Icon:hover {
   transform: scale(1.2);
 }
 .GitHub:hover {
@@ -179,6 +224,48 @@ h1 {
   background-color: white;
 }
 .instagramIcon {
-  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   color: white;
+}
+
+.video-box {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 25px;
+  margin-left: 34%;
+}
+
+.video-full-screen {
+  width: 100%;
+  height: 50%;
+}
+
+.player-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.player-full-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  background-color: white;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }

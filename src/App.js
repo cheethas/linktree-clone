@@ -2,8 +2,10 @@ import React, {useRef, useState} from "react";
 
 import './App.css';
 import logo from './images/ben_profiler.jpg'
-const URL_MOBILE = "https://firebasestorage.googleapis.com/v0/b/ben-for-pres.appspot.com/o/BENJAMIN_Portrait_compressed.m4v?alt=media&token=6f485108-80b5-4d6f-9c40-463aa8ce7ca4";
-const URL_LANDSCAPE = "https://firebasestorage.googleapis.com/v0/b/ben-for-pres.appspot.com/o/BENJAMIN_Landscape_compressed.m4v?alt=media&token=0998a459-621c-4fd9-a84d-1b00b76eac99";
+const URL_MOBILE = "https://firebasestorage.googleapis.com/v0/b/ben-for-pres.appspot.com/o/BENJAMIN_Portrait_lossy.m4v?alt=media&token=25eebd5c-bc38-4129-878d-7afb04becd99";
+const URL_LANDSCAPE = "https://firebasestorage.googleapis.com/v0/b/ben-for-pres.appspot.com/o/BENJAMIN_Landscape_lossy.m4v?alt=media&token=b91820b4-6176-4031-af93-afc3b7a1e913";
+// const URL_LANDSCAPE = "https://vimeo.com/video/518079765";
+// const URL_MOBILE = "https://vimeo.com/video/518079305";
 
 function App() {
   const vidRef = useRef(null);
@@ -40,6 +42,7 @@ function App() {
                   preload="metadata"
                   className="player-full"
                   type="video/mp4"
+                  playsInline
                 />
             </div>
 
@@ -48,12 +51,35 @@ function App() {
                     <div></div>
               </div>
             }
-            
+           
+            {/* <div className="Link-row">
+              <div className="Link">
+                <div className="Link-container-row">
+                  <a href="https://www.tcdsu.org/images/leadership-race/2021-2022/2021_candidatemanifestos/PRES/SU2122_PRES_BEN_CUMMINS_MANIFESTO.pdf">MANIFESTO</a>
+                </div>
+              </div>
+
+              <div className="Link">
+                <div className="Link-container-row">
+                  <a href="https://drive.google.com/file/d/16Z3dzyQz8NDap43_rAkN16kFfN5PWdj7/view">MANIFESTO AS GAEILGE</a>
+                </div>
+              </div>
+
+            </div> */}
+          
             <div className="Link">
               <div className="Link-container">
-                <a href="https://drive.google.com/drive/u/0/folders/1Lc3mV3emKhG_5ixDTMdTgBTVnsi1mcE5">MANIFESTO</a>
+                <a href="https://www.tcdsu.org/images/leadership-race/2021-2022/2021_candidatemanifestos/PRES/SU2122_PRES_BEN_CUMMINS_MANIFESTO.pdf">MANIFESTO</a>
               </div>
             </div>
+
+            {!vidPlaying &&<div className="Link">
+              <div className="Link-container">
+                <a href="https://drive.google.com/file/d/16Z3dzyQz8NDap43_rAkN16kFfN5PWdj7/view">MANIFESTO AS GAEILGE</a>
+              </div>
+            </div>}
+          
+            
 
             <div className="Link">
               <div className="Link-container">
@@ -61,17 +87,17 @@ function App() {
               </div>                
             </div>
               
-            <div className="Link">
+            {!vidPlaying &&<div className="Link">
               <div className="Link-container">
                 <a href="https://www.instagram.com/ben_cummins/">INSTAGRAM</a>
               </div>                
-            </div>
+            </div>}
 
-            <div className="Link">
+            {!vidPlaying &&<div className="Link">
               <div className="Link-container">
-                <a href="https://www.facebook.com/ben4prez1819">FACEBOOK</a>
+                <a href="https://www.facebook.com/benfortcdsupresident">FACEBOOK</a>
               </div>                
-            </div>
+            </div>}
 
             {!vidPlaying && 
               <div style={{
